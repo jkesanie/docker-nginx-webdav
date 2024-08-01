@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:1.22.1
 
 LABEL maintainer="maltokyo"
 
