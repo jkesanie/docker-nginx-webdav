@@ -1,6 +1,6 @@
 FROM nginx:1.22.1
 
-LABEL maintainer="maltokyo"
+LABEL maintainer="jkesanie"
 
 RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y nginx-extras apache2-utils
 
@@ -15,7 +15,4 @@ RUN chown -R www-data:www-data "/media/data"
 
 VOLUME /media/data
 
-
-COPY entrypoint.sh /
-RUN chmod +x entrypoint.sh
-CMD /entrypoint.sh && nginx -g "daemon off;"
+CMD nginx -g "daemon off;"
